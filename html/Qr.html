@@ -1,0 +1,46 @@
+<!--Crear un formulario de contactos, generar código QR-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto con QR</title>
+    <link rel="stylesheet" href="../css/Style4.css">
+</head>
+
+<header>
+    <div class="back">
+        <div class="menu container">
+            <a href="#" class="logo">Contactos</a>
+  </div>
+</div>
+</header>
+
+<body>
+
+<div class="container">
+    <h2>Formulario de Contacto</h2>
+
+    <form id="contactForm">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" required><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion"><br><br>
+
+        <button type="button" onclick="generateQR()">Generar QR</button>
+    </form>
+    <div class="qr-container" id="qrcode"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="../js/Script4.js"></script>
+
+</body>
+</html>

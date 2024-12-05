@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1673794784636-2e69436d3eee?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    max-width: 100%;
+    margin: auto;
+    background-color: #561eb1;
+    font-size: 18px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hmenu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#hmenu > li {
+    position: relative;
+}
+
+#hmenu > li > a {
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#hmenu > li:hover {
+    background-color: #3e1485;
+}
+
+#vmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 250px;
+    display: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#hmenu li:hover #vmenu {
+    display: block;
+}
+
+#vmenu li {
+    width: 100%;
+}
+
+#vmenu li a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#vmenu li:hover {
+    background-color: #333;
+}
+
+#vmenu h4 {
+    padding: 15px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+#Ver {
+    color: #ff9800;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+#Ver:hover {
+    color: #ffc107;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
+}
+
+a {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+

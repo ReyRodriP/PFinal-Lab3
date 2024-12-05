@@ -1,0 +1,87 @@
+<!--Crear Formulario con múltiples páginas-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Multi-página</title>
+    <link rel="stylesheet" href="../css/Style3.css">
+</head>
+<body>
+
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <a href="#" class="logo">Rey de la Salud</a>
+                <input type="checkbox" id="menu" />
+      </div>
+    </div>
+</header>
+
+
+<div class="container">
+    <!-- Página 1-->
+    <div class="form-page active" id="page-1">
+        <h2>Datos Personales</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required><br><br>
+        <button class="btn" onclick="nextPage(2)">Siguiente</button>
+    </div>
+
+    <!-- Página 2-->
+    <div class="form-page" id="page-2">
+        <h2>Familiares</h2>
+        <div id="familiares-list">
+            <div class="familiar-item">
+                <label>Nombre: </label><input type="text" class="familiar-nombre"><br><br>
+                <label>Parentesco: </label><input type="text" class="familiar-parentesco"><br><br>
+                <label>Edad: </label><input type="number" class="familiar-edad"><br><br>
+            </div>
+        </div>
+        <button class="btn-secondary" onclick="addFamiliar()">Agregar familiar</button><br><br>
+        <button class="btn" onclick="nextPage(1)">Anterior</button>
+        <button class="btn" onclick="nextPage(3)">Siguiente</button>
+    </div>
+
+    <!-- Página 3-->
+    <div class="form-page" id="page-3">
+        <h2>Condiciones Pre-Existentes de Salud</h2>
+        <label>Enfermedad:</label>
+        <input type="text" id="enfermedad" required><br><br>
+        <label>Tiempo con la Enfermedad (años):</label>
+        <input type="number" id="tiempoEnfermedad" required><br><br>
+        <button class="btn" onclick="nextPage(2)">Anterior</button>
+        <button class="btn" onclick="nextPage(4)">Siguiente</button>
+    </div>
+
+    <!-- Página 4-->
+    <div class="form-page" id="page-4">
+        <h2>Internamientos Realizados</h2>
+        <div id="internamientos-list">
+            <div class="internamiento-item">
+                <label>Fecha:</label><input type="date" class="internamiento-fecha"><br><br>
+                <label>Centro Médico:</label><input type="text" class="internamiento-centro"><br><br>
+                <label>Diagnóstico:</label><input type="text" class="internamiento-diagnostico"><br><br>
+            </div>
+        </div>
+        <button class="btn-secondary" onclick="addInternamiento()">Agregar internamiento</button><br><br>
+        <button class="btn" onclick="nextPage(3)">Anterior</button>
+        <button class="btn" onclick="nextPage(5)">Siguiente</button>
+    </div>
+
+    <!-- Página 5-->
+    <div class="form-page" id="page-5">
+        <h2>Resumen de Datos</h2>
+        <pre id="resultado"></pre>
+        <button class="btn" onclick="nextPage(4)">Anterior</button>
+        <button class="btn btn-secondary" onclick="editarFormulario()">Editar</button>
+        <button class="btn" onclick="grabarFormulario()">Grabar</button>
+    </div>
+
+</div>
+
+<script src="../js/Script3.js"></script>
+</body>
+</html>

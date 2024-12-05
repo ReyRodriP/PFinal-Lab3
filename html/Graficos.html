@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Gráficos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="../css/Style5.css">
+</head>
+<body>
+
+    <h1>Gráfico de Ventas por Mes</h1>
+
+    <form id="salesForm">
+        <label for="enero">Enero: </label>
+        <input type="number" id="enero" name="enero" required><br>
+
+        <label for="febrero">Febrero: </label>
+        <input type="number" id="febrero" name="febrero" required><br>
+
+        <label for="marzo">Marzo: </label>
+        <input type="number" id="marzo" name="marzo" required><br>
+
+        <label for="abril">Abril: </label>
+        <input type="number" id="abril" name="abril" required><br>
+
+        <label for="mayo">Mayo: </label>
+        <input type="number" id="mayo" name="mayo" required><br>
+
+        <label for="junio">Junio: </label>
+        <input type="number" id="junio" name="junio" required><br>
+
+        <button type="button" onclick="generateChart()" id="Boton">Generar Gráfico</button>
+    </form>
+    <canvas id="salesChart" width="400" height="200"></canvas>
+
+    <script src="../js/Script5.js"></script>
+
+</body>
+</html>

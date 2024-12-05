@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="../css/Style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="container"></div>
+        <div class="hero__wave" style="overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <section class="presentation container">
+            <h2 class="subtitle">Soy Reynaldo Rodríguez</h2>
+            <p class="presentation__copy">Estudiante de la asignatura laboratorio de lenguaje de programación 3 (INF-517), impartida por el maestro Radhames Silverio González. El trabajo presentado a continuación es una recopilación de proyectos desarrollados en el transcurso del semestre, por lo que espero que sean de su agrado.</p>
+            <button id="btnStart" class="presentation__cta">Empezar</button>
+        </section>
+    </main>
+
+    <!-- Menú Lateral -->
+    <div class="menu-lateral" id="menuLateral">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <ul>
+            <li><a href="Biografia.html">Biografía</a></li>
+            <li><a href="Etiquetas.html">Etiquetas</a></li>
+            <li><a href="Menu.html">Menú</a></li>
+            <li><a href="Algoritmo.html">Algoritmo Cédula</a></li>
+            <li><a href="MenuJson.html">Menú Dinámico Json</a></li> <!--Arreglar-->
+            <li><a href="Formulario.html">Formulario</a></li>
+            <li><a href="Qr.html">Contacto QR</a></li>
+            <li><a href="Graficos.html">Gráficos</a></li>
+            <li><a href="FormularioDB.html">Formulario con BD</a></li>
+            <li><a href="Servicio.html">Servicio Web</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const btnStart = document.getElementById('btnStart');
+        const menuLateral = document.getElementById('menuLateral');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Abrir el menú lateral
+        btnStart.addEventListener('click', () => {
+            menuLateral.classList.add('open');
+        });
+
+        // Cerrar el menú lateral
+        closeMenu.addEventListener('click', () => {
+            menuLateral.classList.remove('open');
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/e60349e1f3.js" crossorigin="anonymous"></script>
+</body>
+</html>
